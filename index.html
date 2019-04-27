@@ -8,46 +8,48 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" id="box">
         <div class="container" style="text-align: center">
             <h1 class="display-4">Train Schedule</h1>
             <p>A Comprehensive Directory of a Train Schedule Application</p>
         </div>
     </div>
-        </a>
-        <br><br>
+    </a>
+    <br><br>
 
-        <div class='row'>
-           
-                <div class="card col-lg-12 mt-2 p-4">
-                    <div class="card-header">
-                        <h5 card="card-title">Train Schedule</h5>
-                    </div>
-                    <div class='card body'>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Train Name</th>
-                                    <th scope="col">Destination</th>
-                                    <th scope="col">Frequency (min)</th>
-                                    <th scope="col">Next Arrival</th>
-                                    <th scope="col">Next Train Arrives</th>
-                                </tr>
-                            </thead>
-                            <tbody id='tableBody'>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-        </div>
-        <div class="row">
+    <div class='row'>
+
         <div class="card col-lg-12 mt-2 p-4">
             <div class="card-header">
-                <h5 class="card-title" id='add-train'>Train Input Form</h5>
+                <h5 card="card-title"><img src="assets/noun_Time_2452973.png" alt="clock">Train Schedule</h5>
             </div>
-            <div class="card-body"> 
+            <div class='card body'>
+                <table class="table">
+                    <thead>
+                        <tr id="names">
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Next Train Arrives</th>
+                        </tr>
+                    </thead>
+                    <tbody id='tableBody'>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col-lg-12 mt-2 p-4">
+            <div class="card-header">
+                
+                <h5 class="card-title" id='add-train'><img src="assets/noun_Train_21833.png" alt="train">Train Input Form</h5>
+            </div>
+            <div class="card-body">
                 <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -55,37 +57,38 @@
                     </button>
                     <strong>Error, Some of the information you entered is not correct</strong>
                     <div id="errors"></div> -->
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label for="trainName">Train Name *</label>
-                        <input type="trainName" class="form-control" id="trainName" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputRole">Destination *</label>
-                        <input type="destination" class="form-control" id="destination" placeholder="City">
-                    </div>
-                    <div class="form-group">
-                        <label for="firstTrain">First Train Time (HH:mm - military time) *</label>
-                        <input type="firstTrain" class="form-control" id="firstTrain" placeholder="24:00">
-                    </div>
-                    <div class="form-group">
-                        <label for="frequency">Frequency (min)</label>
-                        <input type="frequency" class="form-control" id="frequency" placeholder="min">
-                    </div>
-                
-                    <button type="submit" class="btn submitbttn" onclick = "addTrain()">Add</button>
-                </div> 
-               
             </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="trainName">Train Name *</label>
+                    <input type="trainName" class="form-control" id="trainName" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="inputRole">Destination *</label>
+                    <input type="destination" class="form-control" id="destination" placeholder="City">
+                </div>
+                <div class="form-group">
+                    <label for="firstTrain">First Train Time (HH:mm - military time) *</label>
+                    <input type="firstTrain" class="form-control" id="firstTrain" placeholder="24:00">
+                </div>
+                <div class="form-group">
+                    <label for="frequency">Frequency (min)</label>
+                    <input type="frequency" class="form-control" id="frequency" placeholder="min">
+                </div>
+
+                <button type="submit" class="btn btn-warning" class="submit" onclick="addTrain()">Add</button>
+            </div>
+
         </div>
-        </div>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-           <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
-            <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-            <script src='app.js'></script>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src='app.js'></script>
+
 </body>
 
 </html>

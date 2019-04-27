@@ -1,0 +1,70 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(assets/DigitalDotRoadsign.otf);
+}
+body {
+    background-color: lightgrey;
+}
+img {
+    height: 25px;
+}
+
+#tableBody {
+    font-family: myFirstFont;
+    color: yellow;
+    font-size: 18px;
+}
+
+.table {
+    background-color: black;
+}
+#names {
+    color: black;
+    background-color: white;
+}
+
+#box{
+    background-color: black;
+}
+.container {
+    font-family: myFirstFont;
+    color: white;
+}
+.display-4 {
+    font-size: 100px;
+}
+.form-control {
+    background-color: yellow;
+}
+p {
+    font-size: 24px;
+}
+.btn-warning {
+    background-color: black;
+    border-color: black;
+    color: white;
+    font-family: myFirstFont;
+}
+.btn-warning:hover {
+    background-color: yellow;
+    border-color: yellow;
+    color: black;
+    font-family: myFirstFont;
+}
+label {
+    font-family: myFirstFont;
+    font-size: 20px;
+}
+.card-header {
+    background-color: black;
+    color: white;
+}
+.card-title {
+    margin-bottom: 0;
+}
+h5 {
+    margin-bottom: 0;
+}
+.col {
+    background-color: lightgrey;
+}

@@ -29,7 +29,6 @@ function addTrain() {
 
 
 
-
     database.ref().push({
         trainName: trainName,
         destination: destination,
@@ -37,6 +36,10 @@ function addTrain() {
         frequency: frequency
 
     });
+     $('#trainName').val('')
+     $('#destination').val('')
+     $('#firstTrain').val('')
+     $('#frequency').val('')
 }
 
 database.ref().on("child_added", function (childSnapShot) {
